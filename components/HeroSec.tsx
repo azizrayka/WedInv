@@ -35,10 +35,10 @@ const HeroSec = ({state}:{state:boolean}) => {
 
   return (
     <div className="hero" ref={component}>
-      <div className="relative h-screen w-screen text-white overflow-hidden bg-[url(/am.jpg)] bg-cover bg-center flex justify-center items-center">
+      <div className="relative h-screen w-screen text-white overflow-hidden bg-[url(/wedd.jpg)] bg-cover bg-center flex justify-center items-center">
         <div className="flex flex-col items-center">
             <Image
-              src="/names.png"
+              src="/engnames.png"
               alt="OF"
               width={400}
               height={70}
@@ -51,8 +51,8 @@ const HeroSec = ({state}:{state:boolean}) => {
           <span className="w-20 text-center">Nzoul</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
-          <span>May</span>
-          <span className="text-2xl">07</span>
+          <span>JAN</span>
+          <span className="text-2xl">01</span>
           <span>2027</span>
           </span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
@@ -64,8 +64,8 @@ const HeroSec = ({state}:{state:boolean}) => {
           <span className="w-20 text-center">Wedding</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
-          <span>May</span>
-          <span className="text-2xl">08</span>
+          <span>JAN</span>
+          <span className="text-2xl">01</span>
           <span>2027</span>
           </span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
