@@ -2,13 +2,16 @@
 /* eslint-disable @next/next/no-img-element */
 export const dynamic = "force-dynamic";
 import { v2 as cloudinary } from "cloudinary";
-// Inline a simple Lightbox replacement to avoid import errors for
-// ./components/Lightbox which may be missing. This keeps changes
-// scoped to this file as requested.
 
 type Photo = { publicId: string; width: number; height: number };
 
-function Lightbox({ photo, getCldUrl }: { photo: Photo; getCldUrl: (id: string, w: number) => string }) {
+function Lightbox({
+  photo,
+  getCldUrl,
+}: {
+  photo: Photo;
+  getCldUrl: (id: string, w: number) => string;
+}) {
   const src = getCldUrl(photo.publicId, Math.min(photo.width, 800));
   return (
     <div className="overflow-hidden rounded bg-neutral-900">
@@ -17,7 +20,7 @@ function Lightbox({ photo, getCldUrl }: { photo: Photo; getCldUrl: (id: string, 
   );
 }
 
-// 1. Configure Cloudinary (Secret is safe here because it's a Server Component)
+// 1. Configure Cloudinary (secret is safe here because this is a Server Component)
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -31,18 +34,40 @@ function getCldUrl(publicId: string, width: number) {
 }
 
 export default async function Page() {
-  // 3. Automatically fetch images directly in the component
-  const result = await cloudinary.search
-    .expression("resource_type:image") // Change to "folder:my-folder" to filter
-    .sort_by("created_at", "desc")
-    .max_results(30)
-    .execute();
+  let photos: Photo[] = [];
+  let errorMessage = "";
 
-  const photos: Photo[] = result.resources.map((r: any) => ({
-    publicId: r.public_id,
-    width: r.width,
-    height: r.height,
-  }));
+  // 3. Fetch images, catching errors so the real message is visible
+  try {
+    const result = await cloudinary.search
+      .expression("resource_type:image") // Change to "folder:my-folder" to filter
+      .sort_by("created_at", "desc")
+      .max_results(30)
+      .execute();
+
+    photos = result.resources.map((r: any) => ({
+      publicId: r.public_id,
+      width: r.width,
+      height: r.height,
+    }));
+  } catch (e: any) {
+    errorMessage = e?.error?.message || e?.message || JSON.stringify(e);
+    console.error("Cloudinary error:", e);
+  }
+
+  // Temporary debug screen: remove once everything works
+  if (errorMessage) {
+    return (
+      <main className="min-h-screen bg-neutral-950 text-white p-6">
+        <p className="text-red-400">Cloudinary error: {errorMessage}</p>
+        <p className="text-neutral-400 mt-2 text-sm">
+          cloud: {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ? "set" : "MISSING"} |
+          key: {process.env.CLOUDINARY_API_KEY ? "set" : "MISSING"} |
+          secret: {process.env.CLOUDINARY_API_SECRET ? "set" : "MISSING"}
+        </p>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-neutral-950 text-white p-6">
