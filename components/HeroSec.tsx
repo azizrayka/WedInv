@@ -51,8 +51,8 @@ const HeroSec = ({state}:{state:boolean}) => {
           <span className="w-20 text-center">Nzoul</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
-          <span>JAN</span>
-          <span className="text-2xl">01</span>
+          <span>MAI</span>
+          <span className="text-2xl">07</span>
           <span>2027</span>
           </span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
@@ -64,8 +64,8 @@ const HeroSec = ({state}:{state:boolean}) => {
           <span className="w-20 text-center">Wedding</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
-          <span>JAN</span>
-          <span className="text-2xl">01</span>
+          <span>MAI</span>
+          <span className="text-2xl">08</span>
           <span>2027</span>
           </span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>

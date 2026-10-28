@@ -116,7 +116,7 @@ const Detailes = () => {
         { /** Nzoul detailes */}
         <div className="flex flex-col gap-5 justify-center items-center py-10 nzould">
             <span className="text-3xl font-bold texte">Nzoul count down</span>
-            <div className="taban"><Countdown targetDate="2027-01-01T21:00:00" /></div>
+            <div className="taban"><Countdown targetDate="2027-05-07T21:00:00" /></div>
             <div className="relative h-[700px] animimg">
                 <span className="text-3xl font-bold texte">Nzoul dress code </span>
                 <span className="absolute top-10 left-10 text-3xl font-bold texte">Traditional</span>
@@ -163,16 +163,16 @@ const Detailes = () => {
             </div>
             <div className="flex flex-col gap-5 justify-center items-center mx-3">
                 <span className="text-3xl font-bold texte">Nzoul location</span>
-                <Location name={"location"} address={"addresse"} mapsUrl={""} />
+                <Location name={"MARASSIM"} address={"addresse"} mapsUrl={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.321174446886!2d10.7328927!3d34.82301650000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301d35cdb3518f5%3A0xe43a5623eae16e25!2sMARASSIM!5e0!3m2!1sen!2stn!4v1793191154384!5m2!1sen!2stn"} />
             </div>
         </div>
         {/** Wedd detailes */}
         <div className="flex flex-col gap-5 justify-center items-center py-10">
             <span className="text-3xl font-bold texte">wedding count down</span>
-            <div className="taban2"><Countdown targetDate="2027-01-01T21:00:00" /></div>
+            <div className="taban2"><Countdown targetDate="2027-05-08T21:00:00" /></div>
             <div className="flex flex-col gap-5 justify-center items-center mx-3">
                 <span className="text-3xl font-bold texte">Wedding location</span>
-                <Location name={"location"} address={"addresse"} mapsUrl={""} />
+                <Location name={"Le Palace Miami salle des fetes"} address={"addresse"} mapsUrl={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.0022755439227!2d10.7830093!3d34.7555355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301d31cfa3cb759%3A0xd8e620d2ea4dc088!2sLe%20Palace%20Miami%20salle%20des%20fetes!5e0!3m2!1sen!2stn!4v1793191219058!5m2!1sen!2stn"} />
             </div>
         </div>
     </div>
