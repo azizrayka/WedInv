@@ -47,7 +47,7 @@ const HeroSec = ({state}:{state:boolean}) => {
               priority
             />
             {/* Nzoul Box */}
-        <div className="px-5 backdrop-blur-sm p-3 rounded-lg top-[58%] left-0 right-0 mx-auto w-fit flex flex-row gap-5 items-center text-black nzoul" style={{ opacity: 0 }}>
+        <div className="text-white px-5 backdrop-blur-sm p-3 rounded-lg top-[58%] left-0 right-0 mx-auto w-fit flex flex-row gap-5 items-center text-black nzoul" style={{ opacity: 0 }}>
           <span className="w-20 text-center">Nzoul</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
@@ -60,7 +60,7 @@ const HeroSec = ({state}:{state:boolean}) => {
         </div>
 
         {/* Wedding Box */}
-        <div className="absolute px-5 backdrop-blur-sm p-3 rounded-lg top-[72%] left-0 right-0 mx-auto w-fit flex flex-row gap-5 items-center text-black wedd" style={{ opacity: 0 }}>
+        <div className="text-white absolute px-5 backdrop-blur-sm p-3 rounded-lg top-[72%] left-0 right-0 mx-auto w-fit flex flex-row gap-5 items-center text-black wedd" style={{ opacity: 0 }}>
           <span className="w-20 text-center">Wedding</span>
           <div className="h-[80px] w-1 border-b-[3px] border-black bg-black"></div>
           <span className="flex flex-col items-center">
