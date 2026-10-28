@@ -35,10 +35,10 @@ const HeroSec = ({state}:{state:boolean}) => {
 
   return (
     <div className="hero" ref={component}>
-      <div className="relative h-screen w-screen text-white overflow-hidden bg-[url(/wedd.jpg)] bg-cover bg-center flex justify-center items-center">
+      <div className="relative h-screen w-screen text-white overflow-hidden bg-[url(/am.jpg)] bg-cover bg-center flex justify-center items-center">
         <div className="flex flex-col items-center">
             <Image
-              src="/engnames.png"
+              src="/names.png"
               alt="OF"
               width={400}
               height={70}
