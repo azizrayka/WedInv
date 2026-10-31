@@ -38,11 +38,11 @@ const HeroSec = ({state}:{state:boolean}) => {
       <div className="relative h-screen w-screen text-white overflow-hidden bg-[url(/ma2.jpg)] bg-cover bg-center flex justify-center items-center">
         <div className="flex flex-col items-center">
             <Image
-              src="/names.png"
+              src="/names-removebg-preview.png"
               alt="OF"
               width={400}
               height={70}
-              className="object-contain top-75 w-auto h-auto names"
+              className="absolute object-contain bottom-80 w-[500px] h-[400px] names"
               style={{ opacity: 0 }}
               priority
             />
